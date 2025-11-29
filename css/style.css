@@ -1,0 +1,283 @@
+/* Global Stylesheet for Study Tracker App */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar .logout-btn {
+  padding: 8px 15px;
+  background: #ff4b4b;
+  color: #fff;
+  border-radius: 6px;
+}
+.navbar .logout-btn:hover {
+  background: #e03333;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+.card h2 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-primary {
+  background: #f54ce7;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #d433cc;
+}
+.btn-success {
+  background: #38c172;
+  color: white;
+}
+.btn-success:hover {
+  background: #259e57;
+}
+.btn-danger {
+  background: #e03131;
+  color: white;
+}
+.btn-danger:hover {
+  background: #c12a2a;
+}
+
+/* Subject List */
+.subject-box {
+  padding: 18px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subject-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Forms */
+form input, form select, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 18px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #fff7fe;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #fdcbfb;
+}
+
+/* Prediction Box */
+.prediction-box {
+  padding: 20px;
+  border-radius: 12px;
+  background: #fffbe6;
+  border-left: 6px solid #ffdd57;
+  margin-top: 20px;
+}
+.pred-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #d4a100;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .subject-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ===========================
+      AUTH PAGES (Login / Signup)
+   =========================== */
+
+.auth-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff849d, #db9dff);
+  padding: 20px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  background: #faebf6;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  animation: fadeIn 0.5s ease;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.auth-message {
+  background: #ffe3e3;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fd6f6f;
+  margin-bottom: 18px;
+  font-size: 15px;
+  border-left: 4px solid #fa9c9c;
+}
+
+.auth-form .auth-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.auth-form .auth-input:focus {
+  border-color: #fdf5f6;
+  box-shadow: 0 0 0 3px rgba(76,110,245,0.2);
+  outline: none;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #fffbec;
+  color: #2b071f;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-btn:hover {
+  background: #ff8ec1;
+  color: rgb(255, 249, 249);
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-link a {
+  color: #2b071f;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* testing */
+/*
+.auth-logo {
+  max-width: 80px;
+  width: 25%;
+  height: auto;
+  display: block;
+  margin: 0 auto 18px auto;
+}
+
+
+
+@media (max-width: 500px) {
+  .auth-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+*/
+
